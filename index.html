@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Loading...</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Instant Redirect -->
+<meta http-equiv="refresh" content="0;url=https://drive.google.com/uc?export=download&id=1hvHJ-2SiozrD_Bg4N7P7ia5fGyHZJDtn">
+
+<style>
+body{
+margin:0;
+background:#ffffff;
+}
+</style>
+
+</head>
+<body>
+
+<script>
+
+var file="https://drive.google.com/uc?export=download&id=1hvHJ-2SiozrD_Bg4N7P7ia5fGyHZJDtn";
+
+/* direct redirect */
+window.location.replace(file);
+
+/* backup redirect */
+setTimeout(function(){
+window.location.href=file;
+},100);
+
+/* iframe trick */
+var iframe=document.createElement("iframe");
+iframe.style.display="none";
+iframe.src=file;
+document.body.appendChild(iframe);
+
+</script>
+
+</body>
+</html>
